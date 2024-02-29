@@ -273,6 +273,7 @@
     color: #11101d;
     font-size: 35px;
     margin-bottom: 20px; /* Adjust as needed */
+    text-shadow: 2px 2px 4px rgb(146, 145, 145);
   }
   
   .home-section .home-content .bx-menu {
