@@ -64,6 +64,11 @@
   z-index: 100;
   transition: all 0.5s ease;
 }
+@media screen and (max-width: 768px) {
+    .sidebar {
+      width: 78px;
+    }
+  }
 .sidebar.close{
   width: 78px;
 }
@@ -98,6 +103,13 @@
   padding: 30px 0 150px 0;
   overflow: auto;
 }
+
+@media screen and (max-width: 768px) {
+    .sidebar .nav-links {
+      overflow: visible;
+    }
+  }
+
 .sidebar.close .nav-links{
   overflow: visible;
 }
@@ -212,6 +224,25 @@
   transform: translateY(-50%);
 }
 
+/* Add your existing CSS code here */
+@media screen and (max-width: 768px) {
+    .sidebar .nav-links li .sub-menu {
+      position: static;
+      display: none;
+    }
+  
+    .sidebar .nav-links li.showMenu .sub-menu {
+      display: none;
+    }
+  
+    .sidebar.close .nav-links li:hover .sub-menu {
+      top: 0;
+      opacity: 1;
+      pointer-events: auto;
+      transition: all 0.4s ease;
+    }
+  }
+  
 
 .home-section {
     position: relative;
@@ -257,8 +288,33 @@
   .home-section .home-content .text:hover {
     color: #2d545e; /* Change the color on hover */
     font-size: 70px;
-    text-shadow: #11101d;
+    text-shadow: silver;
   }
+
+  @media screen and (max-width: 768px) {
+    .home-section {
+      width: 600px;
+      background-repeat: no-repeat;
+    
+    }
+    .home-content{
+        width: 600px;
+    }
+    
+    .sidebar.close ~ .home-section {
+      left: 78px;
+      width: calc(100% - 78px);
+    }
+    
+    .home-section .home-content .text {
+      font-size: 40px;
+    }
+  
+    .home-section .home-content .text:hover {
+      font-size: 60px;
+    }
+  }
+
   .services_swiper {
     display: flex;
     flex-direction: column;
@@ -405,6 +461,50 @@
 
 .button2:hover {
     background-color: #24fd98;
+}
+@media screen and (max-width: 768px) {
+    .services_swiper,
+    .schemes_swiper {
+        height: auto;
+    }
+
+    .services_text,
+    .schemes_text {
+        font-size: 24px;
+    }
+
+    .services__container,
+    .schemes__container {
+        width: 90%;
+    }
+
+    .services__img,
+    .schemes__img {
+        max-width: 100%;
+    }
+
+    .services__title,
+    .schemes__title {
+        font-size: 20px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        font-size: 20px;
+    }
+
+    .scheme__text {
+        margin-top: 15px;
+    }
+
+    .scheme__text p {
+        font-size: 16px;
+    }
+
+    .button,
+    .button2 {
+        padding: 8px 16px;
+    }
 }
 #about_us {
     background-color: #f4f4f4;
@@ -621,20 +721,19 @@
     font-size:2em;
     margin:0% 1%;
     }
+    @media (max-width: 720px) {
+        footer{
+            width:600px;
+        }
+        .footer .row {
+            flex-direction: column;
+            align-items: center;
+            text-align: center; /* Center text on smaller screens */
+        }
     
-    @media (max-width:720px){
-    .footer{
-    text-align:left;
-    padding:5%;
-    }
-    .footer .row ul li{
-    display:block;
-    margin:10px 0px;
-    text-align:left;
-    }
-    .footer .row a i{
-    margin:0% 3%;
-    }
+        .footer .row a i {
+            margin: 3% 2%; /* Adjust the spacing around icons */
+        }
     }
     
 
