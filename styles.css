@@ -122,7 +122,7 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li:hover{
-  background: -webkit-linear-gradient(right, #53f479, #02de69, #74f578, #018e39);
+  background: rgb(67, 243, 67);
 }
 .sidebar .nav-links li .iocn-link{
   display: flex;
